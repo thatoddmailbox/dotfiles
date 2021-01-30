@@ -11,3 +11,4 @@ alias gpl='git pull'
 # fancy log from https://ma.ttias.be/pretty-git-log-in-one-line/
 alias gl='git log'
 alias glf="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gll="git log --pretty=format:'*%C(yellow)%d %Creset%s (%H)'"
