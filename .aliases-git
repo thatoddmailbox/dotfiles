@@ -9,6 +9,7 @@ alias gsh='git show'
 alias gcm='git commit -m'
 alias gp='git push'
 alias gpl='git pull'
+alias grt='git remote'
 
 # fancy log from https://ma.ttias.be/pretty-git-log-in-one-line/
 alias gl='git log'
