@@ -10,6 +10,7 @@ alias gcm='git commit -m'
 alias gp='git push'
 alias gpl='git pull'
 alias grt='git remote'
+alias grts='git remote set-url'
 alias grtv='git remote -v'
 
 # fancy log from https://ma.ttias.be/pretty-git-log-in-one-line/
