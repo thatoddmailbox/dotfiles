@@ -1,5 +1,6 @@
 *
 !.aliases-git
+!.aliases-tools
 !.path-tools
 !.gitignore
 !README.md
