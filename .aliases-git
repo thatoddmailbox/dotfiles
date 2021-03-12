@@ -15,6 +15,7 @@ alias grt='git remote'
 alias grta='git remote add'
 alias grts='git remote set-url'
 alias grtv='git remote -v'
+alias greh='git reset HEAD'
 alias gst='git stash'
 alias gstp='git stash pop'
 
