@@ -20,6 +20,7 @@ alias grtv='git remote -v'
 alias gre='git reset'
 alias greh='git reset HEAD'
 alias gst='git stash'
+alias gsts='git stash show'
 alias gstp='git stash pop'
 alias gbl='git blame'
 
