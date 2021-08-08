@@ -22,6 +22,7 @@ alias greh='git reset HEAD'
 alias gst='git stash'
 alias gsts='git stash show'
 alias gstl='git stash list'
+alias gstd='git stash drop'
 alias gstp='git stash pop'
 alias gbl='git blame'
 
