@@ -1,5 +1,6 @@
 *
 !.aliases-git
+!.aliases-misc
 !.aliases-npm
 !.aliases-tools
 !.path-tools
