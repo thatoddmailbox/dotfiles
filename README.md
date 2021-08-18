@@ -1,5 +1,5 @@
 # dotfiles
-Various useful files that belong in a home folder and should be synced across multiple computers.
+Various useful files that belong in a home folder and should be synced across multiple computers. These currently assume you're using the bash shell.
 
 Note that the `.aliases-*` scripts should be included in your `.bashrc` with the `.` command; for example, `. ~/.aliases-git`. They are separated so that you can include only the relevant files.
 
