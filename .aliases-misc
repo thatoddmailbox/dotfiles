@@ -1,3 +1,2 @@
 alias c='cd'
 alias m='mkdir -p'
-alias r='rm'
