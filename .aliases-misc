@@ -3,3 +3,5 @@ alias m='mkdir -p'
 alias s='ssh'
 
 alias school='cd ~/Documents/School/2022FA'
+alias gh='cd ~/Documents/GitHub'
+
