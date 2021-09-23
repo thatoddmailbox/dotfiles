@@ -2,6 +2,11 @@ alias c='cd'
 alias m='mkdir -p'
 alias s='ssh'
 
-alias school='cd ~/Documents/School/2022FA'
+school() {
+	cd ~/Documents/School/2022FA
+	if [[ $1 ]]; then
+		cd $1
+	fi
+}
 alias gh='cd ~/Documents/GitHub'
 alias gos='cd ~/go/src/github.com'
