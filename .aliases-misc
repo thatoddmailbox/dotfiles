@@ -5,7 +5,7 @@ alias s='ssh'
 school() {
 	cd ~/Documents/School/2022FA
 	if [[ $1 ]]; then
-		cd $1
+		cd *$1*
 	fi
 }
 alias gh='cd ~/Documents/GitHub'
