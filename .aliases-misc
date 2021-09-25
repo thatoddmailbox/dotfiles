@@ -8,5 +8,10 @@ school() {
 		cd *$1*
 	fi
 }
-alias gh='cd ~/Documents/GitHub'
+gh() {
+	cd ~/Documents/GitHub
+	if [[ $1 ]]; then
+		cd *$1*
+	fi
+}
 alias gos='cd ~/go/src/github.com'
