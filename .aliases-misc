@@ -14,4 +14,9 @@ gh() {
 		cd *$1*
 	fi
 }
-alias gos='cd ~/go/src/github.com'
+gos() {
+	cd ~/go/src/github.com
+	if [[ $1 ]]; then
+		cd *$1*
+	fi
+}
