@@ -26,3 +26,9 @@ gost() {
 		cd *$1*
 	fi
 }
+gosm() {
+	cd ~/go/src/github.com/MyHomeworkSpace
+	if [[ $1 ]]; then
+		cd *$1*
+	fi
+}
