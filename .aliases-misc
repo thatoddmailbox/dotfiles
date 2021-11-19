@@ -32,3 +32,9 @@ gosm() {
 		cd *$1*
 	fi
 }
+gosn() {
+	cd ~/go/src/github.com/NoteToScreen
+	if [[ $1 ]]; then
+		cd *$1*
+	fi
+}
