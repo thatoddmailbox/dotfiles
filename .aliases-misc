@@ -1,7 +1,11 @@
-alias c='cd'
 alias m='mkdir -p'
 alias s='ssh'
 
+c() {
+	if [[ $1 ]]; then
+		cd *$1*
+	fi
+}
 school() {
 	cd ~/Documents/School/2022FA
 	if [[ $1 ]]; then
