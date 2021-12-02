@@ -6,6 +6,11 @@ c() {
 		cd *$1*
 	fi
 }
+e() {
+	if [[ $1 ]]; then
+		echo *$1*
+	fi
+}
 school() {
 	cd ~/Documents/School/2022FA
 	if [[ $1 ]]; then
