@@ -47,3 +47,10 @@ gosn() {
 		cd *$1*
 	fi
 }
+xo() {
+	if [[ $1 ]]; then
+		xdg-open $1
+	else
+		xdg-open .
+	fi
+}
