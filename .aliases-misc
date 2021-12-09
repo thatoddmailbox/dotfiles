@@ -2,7 +2,9 @@ alias m='mkdir -p'
 alias s='ssh'
 
 c() {
-	if [[ $1 ]]; then
+	if [[ -e $1 ]]; then
+		cd $1
+	elif [[ $1 ]]; then
 		cd *$1*
 	fi
 }
