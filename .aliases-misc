@@ -8,6 +8,12 @@ c() {
 		cd *$1*
 	fi
 }
+d() {
+	cd ~/Documents
+	if [[ $1 ]]; then
+		cd *$1*
+	fi
+}
 e() {
 	if [[ $1 ]]; then
 		echo *$1*
