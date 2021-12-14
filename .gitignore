@@ -3,6 +3,6 @@
 !.aliases-misc
 !.aliases-npm
 !.aliases-tools
-!.path-tools
+!.env-path-tools
 !.gitignore
 !README.md
