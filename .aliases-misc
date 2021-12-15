@@ -23,7 +23,9 @@ e() {
 }
 school() {
 	cd ~/Documents/School/2022FA
-	if [[ $1 ]]; then
+	if [[ -e $1 ]]; then
+		cd $1
+	elif [[ $1 ]]; then
 		cd *$1*
 	fi
 }
