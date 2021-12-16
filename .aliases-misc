@@ -1,5 +1,6 @@
 alias m='mkdir -p'
 alias s='ssh'
+alias x='xo'
 
 c() {
 	if [[ -e $1 ]]; then
