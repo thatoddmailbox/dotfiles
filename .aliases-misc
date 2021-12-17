@@ -32,31 +32,41 @@ school() {
 }
 gh() {
 	cd ~/Documents/GitHub
-	if [[ $1 ]]; then
+	if [[ -e $1 ]]; then
+		cd $1
+	elif [[ $1 ]]; then
 		cd *$1*
 	fi
 }
 gos() {
 	cd ~/go/src/github.com
-	if [[ $1 ]]; then
+	if [[ -e $1 ]]; then
+		cd $1
+	elif [[ $1 ]]; then
 		cd *$1*
 	fi
 }
 gost() {
 	cd ~/go/src/github.com/thatoddmailbox
-	if [[ $1 ]]; then
+	if [[ -e $1 ]]; then
+		cd $1
+	elif [[ $1 ]]; then
 		cd *$1*
 	fi
 }
 gosm() {
 	cd ~/go/src/github.com/MyHomeworkSpace
-	if [[ $1 ]]; then
+	if [[ -e $1 ]]; then
+		cd $1
+	elif [[ $1 ]]; then
 		cd *$1*
 	fi
 }
 gosn() {
 	cd ~/go/src/github.com/NoteToScreen
-	if [[ $1 ]]; then
+	if [[ -e $1 ]]; then
+		cd $1
+	elif [[ $1 ]]; then
 		cd *$1*
 	fi
 }
