@@ -18,6 +18,14 @@ doc() {
 		cd *$1*
 	fi
 }
+dow() {
+	cd ~/Downloads
+	if [[ -e $1 ]]; then
+		cd $1
+	elif [[ $1 ]]; then
+		cd *$1*
+	fi
+}
 e() {
 	if [[ $1 ]]; then
 		echo *$1*
