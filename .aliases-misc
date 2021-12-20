@@ -1,3 +1,4 @@
+alias d='doc'
 alias m='mkdir -p'
 alias s='ssh'
 alias x='xo'
@@ -9,7 +10,7 @@ c() {
 		cd *$1*
 	fi
 }
-d() {
+doc() {
 	cd ~/Documents
 	if [[ -e $1 ]]; then
 		cd $1
