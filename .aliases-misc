@@ -1,5 +1,6 @@
 alias d='doc'
 alias m='mkdir -p'
+alias o='xo'
 alias s='ssh'
 alias x='xo'
 
