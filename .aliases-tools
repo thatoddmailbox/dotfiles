@@ -1,1 +1,5 @@
 alias lut="lsusbtree"
+
+brightness() {
+	sudo ddcutil -d $1 setvcp 10 $2
+}
