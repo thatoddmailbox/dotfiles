@@ -11,6 +11,11 @@ c() {
 		cd *$1*
 	fi
 }
+mkc() {
+	mkdir -p $1
+	cd $1
+}
+
 doc() {
 	cd ~/Documents
 	if [[ -e $1 ]]; then
