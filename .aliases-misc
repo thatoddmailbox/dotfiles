@@ -35,11 +35,7 @@ school() {
 }
 gh() {
 	cd ~/Documents/GitHub
-	if [[ -e $1 ]]; then
-		cd $1
-	elif [[ $1 ]]; then
-		cd *$1*
-	fi
+	c $1
 }
 gos() {
 	cd ~/go/src/github.com
