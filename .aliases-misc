@@ -39,11 +39,7 @@ gh() {
 }
 gos() {
 	cd ~/go/src/github.com
-	if [[ -e $1 ]]; then
-		cd $1
-	elif [[ $1 ]]; then
-		cd *$1*
-	fi
+	c $1
 }
 gost() {
 	cd ~/go/src/github.com/thatoddmailbox
