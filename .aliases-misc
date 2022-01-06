@@ -43,11 +43,7 @@ gos() {
 }
 gost() {
 	cd ~/go/src/github.com/thatoddmailbox
-	if [[ -e $1 ]]; then
-		cd $1
-	elif [[ $1 ]]; then
-		cd *$1*
-	fi
+	c $1
 }
 gosm() {
 	cd ~/go/src/github.com/MyHomeworkSpace
