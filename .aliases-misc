@@ -51,11 +51,7 @@ gosm() {
 }
 gosn() {
 	cd ~/go/src/github.com/NoteToScreen
-	if [[ -e $1 ]]; then
-		cd $1
-	elif [[ $1 ]]; then
-		cd *$1*
-	fi
+	c $1
 }
 gosp() {
 	cd ~/go/src/github.com/PartBolt
