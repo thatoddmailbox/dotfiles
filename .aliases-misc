@@ -55,11 +55,7 @@ gosn() {
 }
 gosp() {
 	cd ~/go/src/github.com/PartBolt
-	if [[ -e $1 ]]; then
-		cd $1
-	elif [[ $1 ]]; then
-		cd *$1*
-	fi
+	c $1
 }
 xo() {
 	if [[ $1 ]]; then
