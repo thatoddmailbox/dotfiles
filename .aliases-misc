@@ -11,9 +11,21 @@ c() {
 		cd *$1*
 	fi
 }
+e() {
+	if [[ $1 ]]; then
+		echo *$1*
+	fi
+}
 mkc() {
 	mkdir -p $1
 	cd $1
+}
+xo() {
+	if [[ $1 ]]; then
+		xdg-open $1
+	else
+		xdg-open .
+	fi
 }
 
 doc() {
@@ -23,11 +35,6 @@ doc() {
 dow() {
 	cd ~/Downloads
 	c $1
-}
-e() {
-	if [[ $1 ]]; then
-		echo *$1*
-	fi
 }
 school() {
 	cd ~/Documents/School/2022FA
@@ -56,11 +63,4 @@ gosn() {
 gosp() {
 	cd ~/go/src/github.com/PartBolt
 	c $1
-}
-xo() {
-	if [[ $1 ]]; then
-		xdg-open $1
-	else
-		xdg-open .
-	fi
 }
