@@ -42,6 +42,10 @@ school() {
 	cd ~/Documents/School/2022FA
 	c $1
 }
+pb() {
+	cd ~/Documents/PromptBit
+	c $1
+}
 gh() {
 	cd ~/Documents/GitHub
 	c $1
