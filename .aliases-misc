@@ -46,6 +46,10 @@ pb() {
 	cd ~/Documents/PromptBit
 	c $1
 }
+nts() {
+	cd ~/Documents/PromptBit/NoteToScreen
+	c $1	
+}
 gh() {
 	cd ~/Documents/GitHub
 	c $1
