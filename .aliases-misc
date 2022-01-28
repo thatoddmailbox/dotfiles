@@ -74,3 +74,15 @@ gosp() {
 	cd ~/go/src/github.com/PartBolt
 	c $1
 }
+
+_comp_gh() {
+	# from https://stackoverflow.com/a/39729507
+
+	# Get list of directories
+	# $2 is the word being completed
+	COMPREPLY=($(compgen -d ~/Documents/GitHub/"$2"))
+
+	# Reduce to basenames
+	COMPREPLY=("${COMPREPLY[@]##*/}")
+}
+complete -F _comp_gh gh
