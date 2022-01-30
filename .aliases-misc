@@ -30,6 +30,10 @@ xo() {
 	fi
 }
 
+desk() {
+	cd ~/Desktop
+	c $1
+}
 doc() {
 	cd ~/Documents
 	c $1
