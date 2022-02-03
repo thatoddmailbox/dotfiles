@@ -3,6 +3,7 @@
 !.aliases-go
 !.aliases-misc
 !.aliases-npm
+!.aliases-python
 !.aliases-tools
 !.env-path-tools
 !.gitignore
