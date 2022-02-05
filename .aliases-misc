@@ -91,3 +91,15 @@ _comp_gh() {
 	COMPREPLY=("${COMPREPLY[@]##*/}")
 }
 complete -F _comp_gh gh
+
+_comp_gost() {
+	# from https://stackoverflow.com/a/39729507
+
+	# Get list of directories
+	# $2 is the word being completed
+	COMPREPLY=($(compgen -d  ~/go/src/github.com/thatoddmailbox/"$2"))
+
+	# Reduce to basenames
+	COMPREPLY=("${COMPREPLY[@]##*/}")
+}
+complete -F _comp_gost gost
