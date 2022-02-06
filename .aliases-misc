@@ -103,3 +103,15 @@ _comp_gost() {
 	COMPREPLY=("${COMPREPLY[@]##*/}")
 }
 complete -F _comp_gost gost
+
+_comp_school() {
+	# from https://stackoverflow.com/a/39729507
+
+	# Get list of directories
+	# $2 is the word being completed
+	COMPREPLY=($(compgen -d  ~/Documents/School/2022SP/"$2"))
+
+	# Reduce to basenames
+	COMPREPLY=("${COMPREPLY[@]##*/}")
+}
+complete -F _comp_school school
