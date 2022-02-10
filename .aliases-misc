@@ -94,6 +94,9 @@ complete -F _comp_gh gh
 
 _comp_gost() {
 	# from https://stackoverflow.com/a/39729507
+        if [[ $3 != "gost" ]]; then
+                return 0
+        fi
 
 	# Get list of directories
 	# $2 is the word being completed
