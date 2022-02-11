@@ -82,6 +82,9 @@ gosp() {
 
 _comp_gh() {
 	# from https://stackoverflow.com/a/39729507
+        if [[ $3 != "gh" ]]; then
+                return 0
+        fi
 
 	# Get list of directories
 	# $2 is the word being completed
