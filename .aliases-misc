@@ -110,6 +110,21 @@ _comp_gost() {
 }
 complete -F _comp_gost gost
 
+_comp_nts() {
+	# from https://stackoverflow.com/a/39729507
+	if [[ $3 != "nts" ]]; then
+		return 0
+	fi
+
+	# Get list of directories
+	# $2 is the word being completed
+	COMPREPLY=($(compgen -d  ~/Documents/PromptBit/NoteToScreen/"$2"))
+
+	# Reduce to basenames
+	COMPREPLY=("${COMPREPLY[@]##*/}")
+}
+complete -F _comp_nts nts
+
 _comp_school() {
 	# from https://stackoverflow.com/a/39729507
 	if [[ $3 != "school" ]]; then
