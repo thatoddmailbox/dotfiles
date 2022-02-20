@@ -1,2 +1,3 @@
 alias goi="go install"
+alias gomi="go mod init"
 alias gomt="go mod tidy"
