@@ -82,6 +82,21 @@ gosp() {
 	c $1
 }
 
+_comp_doc() {
+	# from https://stackoverflow.com/a/39729507
+        if [[ $3 != "doc" ]]; then
+                return 0
+        fi
+
+	# Get list of directories
+	# $2 is the word being completed
+	COMPREPLY=($(compgen -d ~/Documents/"$2"))
+
+	# Reduce to basenames
+	COMPREPLY=("${COMPREPLY[@]##*/}")
+}
+complete -F _comp_doc doc
+
 _comp_gh() {
 	# from https://stackoverflow.com/a/39729507
         if [[ $3 != "gh" ]]; then
