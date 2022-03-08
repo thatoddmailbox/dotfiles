@@ -157,6 +157,21 @@ _comp_nts() {
 }
 complete -F _comp_nts nts
 
+_comp_pb() {
+	# from https://stackoverflow.com/a/39729507
+	if [[ $3 != "pb" ]]; then
+		return 0
+	fi
+
+	# Get list of directories
+	# $2 is the word being completed
+	COMPREPLY=($(compgen -d  ~/Documents/PromptBit/"$2"))
+
+	# Reduce to basenames
+	COMPREPLY=("${COMPREPLY[@]##*/}")
+}
+complete -F _comp_pb pb
+
 _comp_school() {
 	# from https://stackoverflow.com/a/39729507
 	if [[ $3 != "school" ]]; then
