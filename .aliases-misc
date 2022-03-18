@@ -5,7 +5,6 @@ alias desk='des'
 alias down='dow'
 alias m='mkdir -p'
 alias o='xo'
-alias s='ssh'
 alias sch='school'
 alias x='xo'
 
