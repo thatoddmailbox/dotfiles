@@ -3,6 +3,7 @@ shopt -s nocaseglob
 alias d='doc'
 alias desk='des'
 alias down='dow'
+alias downl='dow'
 alias m='mkdir -p'
 alias o='xo'
 alias sch='school'
