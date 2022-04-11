@@ -7,7 +7,6 @@ alias downl='dow'
 alias m='mkdir -p'
 alias o='xo'
 alias sch='school'
-alias x='xo'
 
 c() {
 	if [[ -e $1 ]]; then
