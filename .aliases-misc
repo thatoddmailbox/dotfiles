@@ -5,6 +5,7 @@ alias desk='des'
 alias down='dow'
 alias downl='dow'
 alias m='mkdir -p'
+alias mk='mkdir -p'
 alias o='xo'
 alias sch='school'
 
