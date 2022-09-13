@@ -46,7 +46,7 @@ dow() {
 	c $1
 }
 school() {
-	cd ~/Documents/School/2022SP
+	cd ~/Documents/School/2023FA
 	c $1
 }
 pb() {
