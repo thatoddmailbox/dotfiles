@@ -82,6 +82,22 @@ gosp() {
 	c $1
 }
 
+_comp_des() {
+	# from https://stackoverflow.com/a/39729507
+        if [[ $3 != "des" ]]; then
+                return 0
+        fi
+
+	# Get list of directories
+	# $2 is the word being completed
+	COMPREPLY=($(compgen -d ~/Desktop/"$2"))
+
+	# Reduce to basenames
+	COMPREPLY=("${COMPREPLY[@]##*/}")
+}
+
+complete -F _comp_des des
+
 _comp_doc() {
 	# from https://stackoverflow.com/a/39729507
         if [[ $3 != "doc" ]]; then
