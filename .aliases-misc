@@ -9,6 +9,8 @@ alias mk='mkdir -p'
 alias o='xo'
 alias sch='school'
 
+alias pud='pushd'
+
 c() {
 	if [[ -e $1 ]]; then
 		cd $1
