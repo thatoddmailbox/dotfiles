@@ -2,6 +2,7 @@ shopt -s nocaseglob
 
 alias d='doc'
 alias desk='des'
+alias dl='dow'
 alias down='dow'
 alias downl='dow'
 alias m='mkdir -p'
