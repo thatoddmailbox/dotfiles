@@ -244,7 +244,7 @@ _comp_school() {
 
 	# Get list of directories
 	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/Documents/School/2023FA/"$2"))
+	COMPREPLY=($(compgen -d  ~/Documents/School/2023SP/"$2"))
 
 	# Reduce to basenames
 	COMPREPLY=("${COMPREPLY[@]##*/}")
