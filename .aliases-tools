@@ -1,9 +1,13 @@
 alias lut="lsusbtree"
 
 brightness() {
-	if [[ $2 ]]; then
-		sudo ddcutil -d $1 setvcp 10 $2
+	if [[ $1 ]]; then
+		if [[ $2 ]]; then
+			sudo ddcutil -d $1 setvcp 10 $2
+		else
+			sudo ddcutil -d $1 getvcp 10
+		fi
 	else
-		sudo ddcutil -d $1 getvcp 10
+		sudo ddcutil detect
 	fi
 }
