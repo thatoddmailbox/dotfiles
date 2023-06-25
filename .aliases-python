@@ -1,2 +1,4 @@
 export PATH="/home/alex/miniconda3/bin:$PATH"
 alias enconda=". '/home/alex/miniconda3/etc/profile.d/conda.sh'"
+
+alias py3pip="python3 -m pip"
