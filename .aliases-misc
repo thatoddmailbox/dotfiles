@@ -49,7 +49,7 @@ dow() {
 	c $1
 }
 school() {
-	cd ~/Documents/School/2023SP
+	cd ~/Documents/School/2024FA
 	c $1
 }
 pb() {
@@ -244,7 +244,7 @@ _comp_school() {
 
 	# Get list of directories
 	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/Documents/School/2023SP/"$2"))
+	COMPREPLY=($(compgen -d  ~/Documents/School/2024FA/"$2"))
 
 	# Reduce to basenames
 	COMPREPLY=("${COMPREPLY[@]##*/}")
