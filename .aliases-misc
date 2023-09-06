@@ -52,6 +52,10 @@ school() {
 	cd ~/Documents/School/2024FA
 	c $1
 }
+ims() {
+	cd ~/Documents/School/2024FA/21M.385
+	c $1
+}
 pb() {
 	cd ~/Documents/PromptBit
 	c $1
@@ -250,3 +254,18 @@ _comp_school() {
 	COMPREPLY=("${COMPREPLY[@]##*/}")
 }
 complete -F _comp_school school
+
+_comp_ims() {
+	# from https://stackoverflow.com/a/39729507
+	if [[ $3 != "ims" ]]; then
+		return 0
+	fi
+
+	# Get list of directories
+	# $2 is the word being completed
+	COMPREPLY=($(compgen -d  ~/Documents/School/2024FA/21M.385/"$2"))
+
+	# Reduce to basenames
+	COMPREPLY=("${COMPREPLY[@]##*/}")
+}
+complete -F _comp_ims ims
