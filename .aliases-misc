@@ -56,6 +56,10 @@ ims() {
 	cd ~/Documents/School/2024FA/21M.385
 	c $1
 }
+res() {
+	cd ~/Documents/School/Research
+	c $1
+}
 pb() {
 	cd ~/Documents/PromptBit
 	c $1
@@ -269,3 +273,18 @@ _comp_ims() {
 	COMPREPLY=("${COMPREPLY[@]##*/}")
 }
 complete -F _comp_ims ims
+
+_comp_res() {
+	# from https://stackoverflow.com/a/39729507
+	if [[ $3 != "res" ]]; then
+		return 0
+	fi
+
+	# Get list of directories
+	# $2 is the word being completed
+	COMPREPLY=($(compgen -d  ~/Documents/School/Research/"$2"))
+
+	# Reduce to basenames
+	COMPREPLY=("${COMPREPLY[@]##*/}")
+}
+complete -F _comp_res res
