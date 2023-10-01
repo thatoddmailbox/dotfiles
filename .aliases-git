@@ -32,6 +32,7 @@ alias gstd='git stash drop'
 alias gstp='git stash pop'
 alias gstpu='git stash push'
 alias gbl='git blame'
+alias gf='git fetch'
 
 # fancy log from https://ma.ttias.be/pretty-git-log-in-one-line/
 alias gl='git log'
