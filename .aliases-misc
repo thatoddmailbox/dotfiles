@@ -1,5 +1,7 @@
 shopt -s nocaseglob
 
+alias l='ls'
+
 alias d='doc'
 alias desk='des'
 alias dl='dow'
