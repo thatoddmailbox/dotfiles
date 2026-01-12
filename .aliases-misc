@@ -54,6 +54,8 @@ declare -A _dir_aliases=(
 	[gosm]=~/go/src/github.com/MyHomeworkSpace
 	[gosn]=~/go/src/github.com/NoteToScreen
 	[gosp]=~/go/src/github.com/PromptBit
+	[work]=~/work
+	[cwd]=~/work/claudewd
 )
 
 # Generic completion function for directory aliases
