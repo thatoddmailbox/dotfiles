@@ -91,7 +91,7 @@ gosn() {
 	c $1
 }
 gosp() {
-	cd ~/go/src/github.com/PartBolt
+	cd ~/go/src/github.com/PromptBit
 	c $1
 }
 
@@ -209,7 +209,7 @@ _comp_gosp() {
 
 	# Get list of directories
 	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/go/src/github.com/PartBolt/"$2"))
+	COMPREPLY=($(compgen -d  ~/go/src/github.com/PromptBit/"$2"))
 
 	# Reduce to basenames
 	COMPREPLY=("${COMPREPLY[@]##*/}")
