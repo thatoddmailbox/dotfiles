@@ -38,255 +38,37 @@ xo() {
 	fi
 }
 
-des() {
-	cd ~/Desktop
-	c $1
-}
-doc() {
-	cd ~/Documents
-	c $1
-}
-dow() {
-	cd ~/Downloads
-	c $1
-}
-school() {
-	cd ~/Documents/School/2024FA
-	c $1
-}
-ims() {
-	cd ~/Documents/School/2024FA/21M.385
-	c $1
-}
-res() {
-	cd ~/Documents/School/Research
-	c $1
-}
-pb() {
-	cd ~/Documents/PromptBit
-	c $1
-}
-nts() {
-	cd ~/Documents/PromptBit/NoteToScreen
-	c $1
-}
-gh() {
-	cd ~/Documents/GitHub
-	c $1
-}
-gos() {
-	cd ~/go/src/github.com
-	c $1
-}
-gost() {
-	cd ~/go/src/github.com/thatoddmailbox
-	c $1
-}
-gosm() {
-	cd ~/go/src/github.com/MyHomeworkSpace
-	c $1
-}
-gosn() {
-	cd ~/go/src/github.com/NoteToScreen
-	c $1
-}
-gosp() {
-	cd ~/go/src/github.com/PromptBit
-	c $1
-}
+# Directory aliases mapping
+declare -A _dir_aliases=(
+	[des]=~/Desktop
+	[doc]=~/Documents
+	[dow]=~/Downloads
+	[school]=~/Documents/School/2024FA
+	[ims]=~/Documents/School/2024FA/21M.385
+	[res]=~/Documents/School/Research
+	[pb]=~/Documents/PromptBit
+	[nts]=~/Documents/PromptBit/NoteToScreen
+	[gh]=~/Documents/GitHub
+	[gos]=~/go/src/github.com
+	[gost]=~/go/src/github.com/thatoddmailbox
+	[gosm]=~/go/src/github.com/MyHomeworkSpace
+	[gosn]=~/go/src/github.com/NoteToScreen
+	[gosp]=~/go/src/github.com/PromptBit
+)
 
-_comp_des() {
-	# from https://stackoverflow.com/a/39729507
-        if [[ $3 != "des" ]]; then
-                return 0
-        fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d ~/Desktop/"$2"))
-
-	# Reduce to basenames
+# Generic completion function for directory aliases
+_comp_dir_alias() {
+	local cmd="$3"
+	local dir="${_dir_aliases[$cmd]}"
+	[[ -z "$dir" ]] && return 0
+	COMPREPLY=($(compgen -d "$dir/$2"))
 	COMPREPLY=("${COMPREPLY[@]##*/}")
 }
 
-complete -F _comp_des des
-
-_comp_doc() {
-	# from https://stackoverflow.com/a/39729507
-        if [[ $3 != "doc" ]]; then
-                return 0
-        fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d ~/Documents/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_doc doc
-
-_comp_dow() {
-	# from https://stackoverflow.com/a/39729507
-        if [[ $3 != "dow" ]]; then
-                return 0
-        fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d ~/Downloads/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_dow dow
-
-_comp_gh() {
-	# from https://stackoverflow.com/a/39729507
-        if [[ $3 != "gh" ]]; then
-                return 0
-        fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d ~/Documents/GitHub/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_gh gh
-
-_comp_gosm() {
-	# from https://stackoverflow.com/a/39729507
-        if [[ $3 != "gosm" ]]; then
-                return 0
-        fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/go/src/github.com/MyHomeworkSpace/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_gosm gosm
-
-_comp_gost() {
-	# from https://stackoverflow.com/a/39729507
-        if [[ $3 != "gost" ]]; then
-                return 0
-        fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/go/src/github.com/thatoddmailbox/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_gost gost
-
-_comp_gosn() {
-	# from https://stackoverflow.com/a/39729507
-        if [[ $3 != "gosn" ]]; then
-                return 0
-        fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/go/src/github.com/NoteToScreen/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_gosn gosn
-
-_comp_gosp() {
-	# from https://stackoverflow.com/a/39729507
-        if [[ $3 != "gosp" ]]; then
-                return 0
-        fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/go/src/github.com/PromptBit/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_gosp gosp
-
-_comp_nts() {
-	# from https://stackoverflow.com/a/39729507
-	if [[ $3 != "nts" ]]; then
-		return 0
-	fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/Documents/PromptBit/NoteToScreen/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_nts nts
-
-_comp_pb() {
-	# from https://stackoverflow.com/a/39729507
-	if [[ $3 != "pb" ]]; then
-		return 0
-	fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/Documents/PromptBit/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_pb pb
-
-_comp_school() {
-	# from https://stackoverflow.com/a/39729507
-	if [[ $3 != "school" ]]; then
-		return 0
-	fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/Documents/School/2024FA/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_school school
-
-_comp_ims() {
-	# from https://stackoverflow.com/a/39729507
-	if [[ $3 != "ims" ]]; then
-		return 0
-	fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/Documents/School/2024FA/21M.385/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_ims ims
-
-_comp_res() {
-	# from https://stackoverflow.com/a/39729507
-	if [[ $3 != "res" ]]; then
-		return 0
-	fi
-
-	# Get list of directories
-	# $2 is the word being completed
-	COMPREPLY=($(compgen -d  ~/Documents/School/Research/"$2"))
-
-	# Reduce to basenames
-	COMPREPLY=("${COMPREPLY[@]##*/}")
-}
-complete -F _comp_res res
+# Generate functions and set up completion for each directory alias
+for _name in "${!_dir_aliases[@]}"; do
+	_dir="${_dir_aliases[$_name]}"
+	eval "$_name() { cd $_dir; c \$1; }"
+	complete -F _comp_dir_alias "$_name"
+done
+unset _name _dir
