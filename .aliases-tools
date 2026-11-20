@@ -11,3 +11,14 @@ brightness() {
 		sudo ddcutil detect
 	fi
 }
+
+input() {
+	local d=${1:-1}
+	case $2 in
+		hdmi|hdmi1) sudo ddcutil -d $d setvcp 60 0x11 ;;
+		hdmi2)      sudo ddcutil -d $d setvcp 60 0x12 ;;
+		usbc)       sudo ddcutil -d $d setvcp 60 0x1b ;;
+		"")         sudo ddcutil -d $d getvcp 60 ;;
+		*)          sudo ddcutil -d $d setvcp 60 $2 ;;
+	esac
+}
